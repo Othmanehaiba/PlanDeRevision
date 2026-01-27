@@ -1,0 +1,77 @@
+Qst Theorique:
+1)
+Une classe est une representation inital ou un plan (blueprint) d'un objet pour le suivre
+2)
+Car elle ne fait rien et elle n'est pas utile pour un objet.
+3)
+Une classe doit avoir une seule responsabilité et une seule raison de changer.
+
+Qst Pratiques:
+
+1)
+<?php
+
+class Livre{
+    public string $titre;
+    public string $auteur;
+    public string $isbn;
+
+    public function __construct(string $titre, string $auteur, string $isbn){
+        $this->titre = $titre;
+        $this->auteur = $auteur;
+        $this->isbn = $isbn;
+    }
+}
+
+cette classe ne fait rien elle stock juste des donnée
+cette classe ne protège pas ces données (tout les attribus sont public)
+
+2)
+
+<?php
+
+class Livre{
+    private string $titre;
+    private string $auteur;
+    private string $isbn;
+    private bool $emprunte = false;
+
+    public function __construct(string $titre, string $auteur, string $isbn){
+        $this->titre = $titre;
+        $this->auteur = $auteur;
+        $this->isbn = $isbn;
+    }
+
+    public function emprunter(){
+        if ($this->emprunte == true) {
+            echo "Livre deja emprunte";
+            return;
+        }
+
+        $this->emprunte = true;
+        echo "Livre emprunte";
+    }
+
+    public function retourner(){
+        if ($this->emprunte == false) {
+            echo "Livre deja disponible";
+            return;
+        }
+
+        $this->emprunte = false;
+        echo "Livre retourne";
+    }
+
+    public function afficherDetails(){
+    	if($this->emprunte == true){
+    	   $etat = "emprunte";
+    	}else{
+    	   $etat = "disponible";
+    	}   
+        return $this->titre." ".$this->auteur." (". $this->isbn.") ".$etat;
+    }
+}
+
+3)
+La fonction inscriptionAuCours() va étre placer dans la classe etudiant car l'étudiant qui demande l'inscription a un cours est pas le contraire
+	

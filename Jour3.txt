@@ -1,0 +1,23 @@
+Qst Theorique:
+
+1)
+COUNT: sert a compter le nombre de ligne
+SUM: sert a compter la somme des lignes
+AVG: sert a donner la moyenne des lignes
+
+2)
+Non on peut pas car COUNT(*) fait compte les ligne de toutes les colonnes par contre COUNT(colonne) fait compter juste les lignes d'une colonnes
+
+3)
+MAX et MIN sont utilisées avec les dates tel que MAX(date) retourne la date la plus récent par contre MIN(date) qui retourn la date ma plus ancien
+
+Qst Pratique:
+
+1)
+SELECT COUNT(id) AS total_commandes FROM commandes;
+
+2)
+SELECT AVG(prix) AS total_prix_produits FROM produits;
+
+3)
+SELECT MIN(montant) AS total_commandes FROM commandes;

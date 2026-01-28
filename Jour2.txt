@@ -1,0 +1,38 @@
+Qst Theoriques:
+1)
+le DDL Sert à définir ou modifier la structure de la base de données par contre le DML Sert à manipuler les données à l’intérieur des tables.
+
+2)
+Une clé primaire permet d’identifier chaque ligne de manière unique dans une table.
+
+3)
+La clause WHERE permet de sélectionner les lignes qui respecte la condition a l'intérieur de cette clause.
+
+Qst Pratique:
+
+1)
+CREATE TABLE produits (
+    id SERIAL PRIMARY KEY,
+    nom VARCHAR(100),
+    prix INT,
+    stock INT
+);
+
+2)
+INSERT INTO produits (nom, prix, stock)
+VALUES ('Clavier', 250, 10);
+
+INSERT INTO produits (nom, prix, stock)
+VALUES ('Souris', 120, 0);
+
+INSERT INTO produits (nom, prix, stock)
+VALUES ('Écran', 180, 5);
+
+3)
+UPDATE produits
+SET prix = prix * 1.10
+WHERE id = 1;
+
+DELETE FROM produits
+WHERE stock = 0;
+

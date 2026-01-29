@@ -1,0 +1,36 @@
+Qst Theoriques:
+
+1)
+Un objet est une instance d'une classe et la  classe c'est une plan de depart (blueprint).
+
+2)
+on utilise le mot clé $this pour accéder au attribut d'une classe
+
+3)
+le constructeur defini la structure initial d'un objet 
+
+Qts Pratiques:
+
+1) et 2)
+class Voiture{
+    private string $marque;
+    private string $modele;
+    private int $vitesse;
+
+    public function __construct($marque, $modele, $vitesse){
+        $this->marque = $marques;
+        $this->modele = $modele;
+        $this->vitesse = $vitesse;
+    }
+
+    public function accelerer(){
+        return $this->vitesse++;
+    }
+}
+
+3)
+$v1 = new Voiture("Dacia", "Stepway",50);
+$v2 = new Voiture("Fiat", "Doblo",70);
+
+$v1->accelerer();
+$v2->accelerer();

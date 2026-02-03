@@ -1,0 +1,15 @@
+Qst Theoriques: 
+
+1)
+L'encapsulation est un pilier parmi les 4 pilier de la POO il permet de protégé les données
+
+2)
+Public: visible par tous
+Protected: visible par la classe fille
+Private: visible seul au milieu du classe
+
+3)
+Les getters sont des methodes réaliser pour accedes aux attributs d'une classe et setters sont role c'est modifier la valeur de ces attributs
+
+Qst Pratiques: 
+

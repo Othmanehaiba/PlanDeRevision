@@ -1,0 +1,11 @@
+Qst Theoriques: 
+
+1) 
+La difference entre la composition et l'agregation c'est que la composition est une dependence forte par contre l'agregation c'est une dependence faible
+
+2)
+Posséde une ou plusieurs
+
+3)
+Une classe assosiative est utilisé lorsqu'on a une relation many to many entre deux classes
+
